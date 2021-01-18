@@ -1,0 +1,12 @@
+#! /bin/bash
+
+DIR=$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )
+cd "${DIR}"
+
+chmod +x bimp
+rm -rf ~/Library/Application\ Support/GIMP/2.10/plug-ins/bimp
+mkdir -p ~/Library/Application\ Support/GIMP/2.10/plug-ins/bimp
+cp bimp ~/Library/Application\ Support/GIMP/2.10/plug-ins/bimp/
+cp -r bimp-locale ~/Library/Application\ Support/GIMP/2.10/plug-ins/bimp/
+
+echo "BIMP - Batch Image Manipulation Plugin - is installed. You can close this window now."
